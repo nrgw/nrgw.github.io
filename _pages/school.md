@@ -2,6 +2,7 @@
 
 layout: page
 permalink: /school/
+title: 수치상대론 학교
 
 ---
 
