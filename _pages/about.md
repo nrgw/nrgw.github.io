@@ -12,19 +12,13 @@ subtitle: 한국수치상대론그룹은 2005년 어쩌고 저쩌고 소개말�
 
 ---
 
-강궁원
-
-김진호
-
-김희일
-
-박찬
-
-배영복
-
-현영환
-
-Sudip Garain
+* 강궁원 (KISTI)
+* 김진호 (KASI)
+* 김희일 (Zetta-HPC)
+* 박찬 (NIMS)
+* 배영복 (NIMS)
+* 현영환 (KISTI)
+* Sudip Garain (KASI)
 
 ---
 
@@ -32,6 +26,5 @@ Sudip Garain
 
 ---
 
-Jakob Hansen
-
-Mew-Bing Wan
+* Jakob Hansen
+* Mew-Bing Wan
