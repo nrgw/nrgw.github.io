@@ -1,3 +1,10 @@
+---
+
+layout: page
+permalink: /gwnr-seminar/
+
+---
+
 # 여름학교
 
 - [2019 수치상대론 및 중력파 여름학교](https://www.apctp.org/plan.php/GWNRSS2019)
