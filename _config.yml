@@ -1,0 +1,17 @@
+title: 한국수치상대론그룹
+description: 한국수치상대론그룹 홈페이지 입니다.
+
+#baseurl: /business-frontpage
+#color-scheme: "mediumseagreen" # the scheme can be any HEX code like "#00aa55"
+color-scheme: "#0275d8" # This is a HEX code for the primary color in bootstrap 4.
+
+sass:
+  sass_dir: /assets/css/_sass
+  style: compressed
+
+include:
+  - _pages
+  - _posts
+
+exclude:
+  - .sass-cache

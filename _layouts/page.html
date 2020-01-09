@@ -1,0 +1,14 @@
+---
+layout: default
+---
+{% if page.my_header %}
+  {% include {{ page.my_header }} %}
+{% else %}
+  {% include header.html %}
+{% endif %}
+
+<div class="container">
+<div class="col-lg-12 mb-3">
+  {{ content }}
+</div>
+</div>

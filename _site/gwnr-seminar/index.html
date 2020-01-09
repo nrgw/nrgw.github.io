@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <meta name="description" content="한국수치상대론그룹 홈페이지 입니다." />
+  <meta name="author" content="" />
+
+  <title>한국수치상대론그룹</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="/assets/css/main.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="/assets/css/nr.css" rel="stylesheet">
+
+</head>
+
+
+<body>
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
+  <div class="container">
+    <a class="navbar-brand js-scroll-trigger" href="/"
+      >한국수치상대론그룹</a
+    >
+    <button
+      class="navbar-toggler ml-auto"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarResponsive"
+      aria-controls="navbarResponsive"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/about/">그룹소개</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/research/">연구</a>
+        </li>
+        
+        <li class="nav-item active ">
+          <a class="nav-link" href="/gwnr-seminar/">세미나</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/wiki/">위키페이지</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="/job/">채용정보</a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+ 
+  <!-- Page Content -->
+  
+  <script>
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbymVksk9q3sGx4Vx6ro8g5MWxKY0gvd1oMmxqWBoGB9XG2yjQ/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    $('#gwnrSubscriptionForm').modal('hide')
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+
+  })
+
+</script>
+
+<!-- Header -->
+<header>
+
+  <div class="container-fluid mt-3">
+    <div class="jumbotron">
+      <h2 class="bold">
+        중력파 및 수치상대론 세미나
+      </h2>
+      <p class="my-4 text-justify">
+        중력파 및 수치상대론 세미나는 중력파와 수치상대론에 관련된 이론 및 실험 등 다양한 주제로
+        국내 관련 연구자들간에 교류와 연구 활성화를 위해 기획되었습니다.
+        특히 이 세미나는 해당 분야의 기초적인 배경 지식부터 최근 연구 결과까지 차근차근 소개하고 자유롭게 토론하는 형식으로
+        한 연사를 모시고 긴 시간동안 세미나를 갖는 형식으로 기획하였습니다.
+        그리고 이를 통해 공동연구로 자연스럽게 이어질 수 있도록 노력하고 있습니다.
+      </p>
+      <p class="my-2 text-justify">
+        관심 있으신 분은 아래 이메일 리스트에 추가하기 버튼을 통해 등록하시면 중력파 및 수치상대론 세미나 개최에 대한 다양한 정보를 받으실 수 있습니다.
+      </p>
+      <hr class="my-4">
+      <div class="row">
+
+      <div class="col-lg-9 col-md-7 my-2">
+        <p class="float-left text-justify">
+          세미나 조직위: 김영민 (UNIST), 김진호 (KASI), 박찬 (KISTI), 배영복 (NIMS), 현영환 (KISTI)
+        </p>
+      </div>
+
+      <div class="col-lg-3 col-md-5 my-2">
+        <div class="modal fade" id="gwnrSubscriptionForm" tabindex="-1" role="dialog" aria-hidden="false">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+              <div class="modal-header bg-light text-center">
+                <h5 class="modal-title w-100">
+                  이메일 리스트에 추가하기
+                </h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="modal-body">
+
+                <form name="submit-to-google-sheet">
+
+                  <div class="form-group">
+
+                    <label>성명</label>
+                    <div class="row">
+                      <div class="col">
+                        <input name="LastName" type="text" class="form-control" placeholder="성">
+                      </div>
+                      <div class="col">
+                        <input name="FirstName" type="text" class="form-control" placeholder="이름">
+                      </div>
+                    </div>
+
+                    <label class="mt-3">이메일 주소</label>
+                    <input name="Email" type="email" class="form-control" placeholder="이메일">
+                  </div>
+
+                <small class="form-text text-muted text-justify">
+                  본 사이트를 통해 수집된 개인 정보는 중력파 및 수치상대론 세미나 공지 이메일 외 다른 어떠한 용도로 이용하지 않으며 이 정보는 제3자와 공유하지 않습니다.
+                </small>
+
+              </div>
+
+              <div class="modal-footer">
+                <!--<button type="submit" class="btn btn-primary w-100">접수하기</button>-->
+                <button class="btn btn-primary w-100" type="submit">접수하기</button>
+              </div>
+
+            </form>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="float-center">
+          <a href="" class="btn btn-secondary w-100" data-toggle="modal" data-target="#gwnrSubscriptionForm">
+            이메일 리스트에 추가하기
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</header>
+
+
+<div class="container">
+<div class="col-lg-12 mb-3">
+  <div class="container">
+<div class="table-responsive">
+<table class="table table-striped table-hover">
+  <thead>
+    <tr>
+      <th scope="col">회차</th>
+      <th scope="col">제목</th>
+      <th scope="col">발표자</th>
+      <th scope="col">날짜</th>
+    </tr>
+  </thead>
+  <tbody>
+  
+    <tr class="table-row" onclick="document.location = '/gwnr-seminar/seminar6';">
+      <td>6</td>
+      <td>중성자별 내부 고밀도물질 상태방정식</td>
+      <td>이창환 (부산대학교)</td>
+      <td>2018년 01월 06일
+      </td>
+    </tr>
+    
+    <tr class="table-row" onclick="document.location = '/gwnr-seminar/seminar5';">
+      <td>5</td>
+      <td>중성자별 내부 고밀도물질 상태방정식</td>
+      <td>이창환 (부산대학교)</td>
+      <td>2018년 01월 05일
+      </td>
+    </tr>
+    
+    <tr class="table-row" onclick="document.location = '/gwnr-seminar/seminar4';">
+      <td>4</td>
+      <td>중성자별 내부 고밀도물질 상태방정식</td>
+      <td>이창환 (부산대학교)</td>
+      <td>2018년 01월 04일
+      </td>
+    </tr>
+    
+    <tr class="table-row" onclick="document.location = '/gwnr-seminar/seminar3';">
+      <td>3</td>
+      <td>중성자별 내부 고밀도물질 상태방정식</td>
+      <td>이창환 (부산대학교)</td>
+      <td>2018년 01월 03일
+      </td>
+    </tr>
+    
+    <tr class="table-row" onclick="document.location = '/gwnr-seminar/seminar2';">
+      <td>2</td>
+      <td>중성자별 내부 고밀도물질 상태방정식</td>
+      <td>이창환 (부산대학교)</td>
+      <td>2018년 01월 02일
+      </td>
+    </tr>
+    
+    <tr class="table-row" onclick="document.location = '/gwnr-seminar/seminar1';">
+      <td>1</td>
+      <td>중성자별 내부 고밀도물질 상태방정식</td>
+      <td>이창환 (부산대학교)</td>
+      <td>2018년 01월 01일
+      </td>
+    </tr>
+    
+  </tbody>
+</table>
+</div>
+</div>
+
+
+</div>
+</div>
+  <!-- /.container -->
+    <!-- 홈페이지 하단 바 -->
+  <footer class="py-1 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white mt-2">
+        Copyright &copy; Korea Numerical Relativity Group. All Rights Reserved.
+      </p>
+      <p class="m-0 text-center text-white mt-2">
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-light btn-sm" data-toggle="modal" data-target="#warning2">
+          개인정보처리방침
+        </button>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-outline-light btn-sm" data-toggle="modal" data-target="#warning1">
+          이메일무단수집거부
+        </button>
+
+
+
+        <!-- 이메일 무단 수집 거부 Modal -->
+        <div class="modal fade" id="warning1" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="warning1Title">이메일 무단 수집 거부</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body text-justify">
+                <p>본 웹 사이트에 게시된 이메일 주소가 전자우편 수집 프로그램이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며 이를 위반 시 정보통신망법에 의해 형사 처벌됨을 유념하시기 바랍니다.</p>
+                <ul>
+                  <li>정보통신망 이용촉진 및 정보보호 등에 관한법률 제50조의 2 (전자우편주소의 무단 수집행위 등 금지)</li>
+                  <ol>
+                    <li>누구든지 인터넷 홈페이지 운영자 또는 관리자의 사전동의 없이 인터넷 홈페이지에서 자동으로 전자우편주소를 수집하는 프로그램 그 밖의 기술적 장치를 이용하여 전자우편주소를 수집하여서는 아니된다.</li>
+                    <li>누구든지 제1항의 규정을 위반하여 수집된 전자우편주소를 판매·유통하여서는 아니된다.</li>
+                    <li>누구든지 제1항의 및 제2항의 규정에 의하여 수집·판매 및 유통이 금지된 전자우편주소임을 알고 이를 정보전송에 이용하여서는 아니된다.</li>
+                  </ol>
+                  <li>제74조 (벌칙) 다음 각호의 1에 해당하는 자는 1천만원 이하의 벌금에 처한다.</li>
+                  <ol>
+                    <li>제8조제4항을 위반하여 비슷한 표시를 한 제품을 표시·판매 또는 판매할 목적으로 진열한 자</li>
+                    <li>제44조의7제1항제1호의 규정을 위반하여 음란한 부호·문언·음향·화상 또는 영상을 배포·판매·임대하거나 공공연하게 전시한 자 </li>
+                    <li>제44조의7제1항제3호의 규정을 위반하여 공포심이나 불안감을 유발하는 부호·문언·음향·화상 또는 영상을 반복적으로 상대방에게 도달하게 한 자 </li>
+                    <li>제50조제6항의 규정을 위반하여 기술적 조치를 한 자</li>
+                    <li>제50조의8을 위반하여 광고성 정보를 전송한 자</li>
+                    <li>제53조제4항을 위반하여 등록사항의 변경등록 또는 사업의 양도·양수 또는 합병·상속의 신고를 하지 아니한 자</li>
+                  </ol>
+                <li>만일, 위와 같은 기술적 조치를 사용한 이메일주소 무단수집 피해를 당하신 경우 불법스팸 대응센터 전용전화나 (국번없이 118) 홈페이지의 (<a href="https://spam.kisa.or.kr/">https://spam.kisa.or.kr</a>) 신고 창을 통하여 신고하기 바랍니다.</li>
+                </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 개인정보처리방침 Modal -->
+        <div class="modal fade" id="warning2" tabindex="-1" role="dialog" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="warning1Title">개인정보처리방침</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body text-justify">
+                <p>
+                  한국 수치상대론 그룹 홈페이지는 원칙적으로 정보주체의 개인정보를 수집<span>&#183;</span>이용 목적으로 명시한 범위 내에서 처리하며, 정보주체의 사전 동의 없이는 본래의 목적 범위를 초과하여 처리하거나 제3자에게 제공하지 않습니다.
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </p>
+    </div>
+  </footer>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

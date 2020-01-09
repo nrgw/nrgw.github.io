@@ -1,0 +1,19 @@
+<!-- Header -->
+
+<header>
+  <div class="container-fluid mt-3">
+    <div class="jumbotron">
+      {% if page.title != nil and page.title.size != 0 %}
+      <h2 class="bold">
+        {{ page.title }}
+      </h2>
+      <hr>
+      {% endif %}
+      {% if page.subtitle != nil and page.subtitle.size != 0 %}
+      <p class="my-4 text-justify">
+        {{ page.subtitle }}
+      </p>
+      {% endif %}
+    </div>
+  </div>
+</header>
