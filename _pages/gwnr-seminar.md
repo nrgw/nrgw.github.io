@@ -31,10 +31,3 @@ my_header: gwnr-seminar-header.html
 </table>
 </div>
 </div>
-
-# 여름학교
-
-- [2019 수치상대론 및 중력파 여름학교](https://www.apctp.org/plan.php/GWNRSS2019)
-- [2018 수치상대론 및 중력파 여름학교](https://www.apctp.org/plan.php/GWNRSS2018)
-- [2017 수치상대론 및 중력파 여름학교](https://www.apctp.org/plan.php/NRGWSS2017)
-- [2016 수치상대론 및 중력파 여름학교](https://www.apctp.org/plan.php/GWNR2016)
