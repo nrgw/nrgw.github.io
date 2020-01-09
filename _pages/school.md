@@ -1,7 +1,7 @@
 ---
 
 layout: page
-permalink: /gwnr-seminar/
+permalink: /school/
 
 ---
 
