@@ -3,6 +3,7 @@
 layout: page
 permalink: /school/
 title: 수치상대론 학교
+subtitle: 수치상대론 학교에 대한 정보입니다.
 
 ---
 
