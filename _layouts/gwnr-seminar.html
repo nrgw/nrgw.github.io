@@ -20,6 +20,8 @@ layout: default
 
 <div class="container-fluid">
 
+  {% if page.talk != nil and page.talk.size != 0 %}
+
   <div class="jumbotron bg-light">
     <h6 class="bold">
       발표자료
@@ -56,12 +58,11 @@ layout: default
               frameborder="0" width="100%" style="height: 90vh;">
             </div>
             <div class="modal-footer bg-light">
-                <a class="btn btn-primary btn-sm float-right"
-                href="{{ page.media_location }}{{ item.filename }}"
-                role="button">
-                  내려받기
-                </a>
-              <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+              <div class="btn-group float-right" role="group">
+                <a class="btn btn-primary btn-sm" href="{{ page.media_location }}{{ item.filename }}"
+                role="button">내려받기</a>
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">닫기</button>
+              </div>
             </div>
           </div>
         </div>
@@ -87,6 +88,10 @@ layout: default
   </div>
   <!-- Grid row -->
 
+  {% endif %}
+
+
+  {% if page.picture != nil and page.picture.size != 0 %}
 
   <div class="jumbotron bg-light">
     <h6 class="bold">
@@ -121,12 +126,11 @@ layout: default
 
             <!--Footer-->
             <div class="modal-footer bg-light">
-                <a class="btn btn-primary btn-sm float-right"
-                href="{{ page.media_location }}{{ item.filename }}"
-                role="button">
-                  내려받기
-                </a>
-              <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Close</button>
+              <div class="btn-group float-right" role="group">
+                <a class="btn btn-primary btn-sm" href="{{ page.media_location }}{{ item.filename }}"
+                role="button">내려받기</a>
+                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">닫기</button>
+              </div>
             </div>
           </div>
           <!--/.Content-->
@@ -148,6 +152,8 @@ layout: default
     {% endfor %}
 
   </div>
-<!-- Grid row -->
-</div>
+  <!-- Grid row -->
 
+  {% endif %}
+
+</div>
