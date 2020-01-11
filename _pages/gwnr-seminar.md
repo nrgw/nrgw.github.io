@@ -21,7 +21,12 @@ my_header: gwnr-seminar-header.html
   {% for item in site.categories.gwnr-seminar %}
     <tr class="table-row" onclick="document.location = '{{ item.url }}';">
       <td>{{ item.Count }}</td>
-      <td>{{ item.title }}</td>
+      <td>
+        {{ item.title }}
+        {% if item.badge != nil and item.badge.size != 0 %}
+          <span class="badge badge-primary">{{ item.badge }}</span>
+        {% endif %}
+      </td>
       <td>{{ item.presenter }}</td>
       <td>{{ item.date | date: "%Y"}}년 {{ item.date | date: "%m"}}월 {{ item.date | date: "%d"}}일
       </td>
