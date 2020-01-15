@@ -7,7 +7,6 @@
 .table-row{
   cursor:pointer;
   }
-  
-.clickable{
-  cursor:pointer;
-}    
+.pagination-detail{
+  display:none;
+}

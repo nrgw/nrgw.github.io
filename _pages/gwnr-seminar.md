@@ -6,33 +6,47 @@ my_header: gwnr-seminar-header.html
 
 ---
 
-<div class="container">
-<div class="table-responsive">
-<table class="table table-striped table-hover">
+
+<table id="table"
+       data-toggle="table"
+       data-pagination="true"
+       data-classes="table table-hover"
+       data-thead-classes="thead-light"
+       data-sortable="false"
+       data-page-size=10
+       data-mobile-responsive="true"
+       data-check-on-init="true"
+       data-buttons-class="secondary">
   <thead>
     <tr>
-      <th scope="col">회차</th>
-      <th scope="col">제목</th>
-      <th scope="col">발표자</th>
-      <th scope="col">날짜</th>
+      <th data-field="cnt">회차</th>
+      <th data-field="title">제목</th>
+      <th data-field="presenter">발표자</th>
+      <th data-field="date">날짜</th>
     </tr>
   </thead>
   <tbody>
-  {% for item in site.categories.gwnr-seminar %}
-    <tr class="table-row" onclick="document.location = '{{ item.url }}';">
-      <td>{{ item.Count }}</td>
-      <td>
-        {{ item.title }}
-        {% if item.badge != nil and item.badge.size != 0 %}
-          <span class="badge badge-primary">{{ item.badge }}</span>
-        {% endif %}
-      </td>
-      <td>{{ item.presenter }}</td>
-      <td>{{ item.date | date: "%Y"}}년 {{ item.date | date: "%m"}}월 {{ item.date | date: "%d"}}일
-      </td>
-    </tr>
-    {% endfor %}
-  </tbody>
+    {% for item in site.categories.gwnr-seminar %}
+      <tr>
+        <td>{{ item.Count }}</td>
+        <td>
+          <a class="text-reset" href="{{ item.url }}">
+            {{ item.title }}
+            {% if item.badge != nil and item.badge.size != 0 %}
+              <span class="badge badge-primary">{{ item.badge }}</span>
+            {% endif %}
+          </a>
+        </td>
+        <td>{{ item.presenter }}</td>
+        <td>{{ item.date | date: "%Y"}}년 {{ item.date | date: "%m"}}월 {{ item.date | date: "%d"}}일
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
 </table>
-</div>
-</div>
+
+<script>
+  $(function() {
+    $('#table').bootstrapTable()
+  })
+</script>
