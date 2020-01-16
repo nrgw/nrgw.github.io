@@ -4,7 +4,7 @@ layout: page
 permalink: /about/
 
 title: 그룹 소개
-subtitle: 2018년부터 시작.
+subtitle: 우리의 시작을 2018년으로 봐야 할지? 스쿨이 시작된 시점으로 봐야할지?
 
 ---
 
