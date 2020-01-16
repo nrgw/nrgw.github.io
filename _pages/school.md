@@ -2,8 +2,8 @@
 
 layout: page
 permalink: /school/
-title: 수치상대론 학교
-subtitle: 수치상대론 학교에 대한 정보입니다.
+title: 수치상대론 및 중력파 여름학교 & 겨울학교
+subtitle: 2005년부터 개최. 학부생부터 대학원생, 박사후연구원까지 참여 가능.
 
 ---
 
