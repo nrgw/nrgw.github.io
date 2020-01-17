@@ -1,9 +1,6 @@
 - title: 그룹소개
   link: "/about/"
 
-- title: 연구
-  link: "/research/"
-
 - title: 세미나
   link: "/gwnr-seminar/"
 
@@ -17,4 +14,4 @@
   link: "/news/"
 
 - title: 채용정보
-  link: "/job/"
+  link: "/jobs/"
