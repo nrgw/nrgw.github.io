@@ -71,7 +71,7 @@ layout: default
 
       {% if item.thumbnail != nil and item.thumbnail.size != 0 %}
       <a>
-        <img class="img-fluid clickable float-center" src="{{ page.media_location }}{{ item.thumbnail }}"
+        <img class="img-fluid clickable" src="{{ page.media_location }}{{ item.thumbnail }}"
         data-toggle="modal" data-target="#talk{{ num }}">
       </a>
       {% else %}
