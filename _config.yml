@@ -19,4 +19,4 @@ exclude:
 timezone: Asia/Seoul
 
 #new_badge 이후에 new 배지가 게시물 제목에서 사라짐
-new_badge: 3
+new_badge: 30
