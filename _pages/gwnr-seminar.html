@@ -37,7 +37,7 @@ my_header: gwnr-seminar-header.html
             {% assign start = item.date | date: '%s' %}
             {% assign secondsSince = today | minus: start %}
             {% assign daysSince = secondsSince | divided_by: 60 | divided_by: 60 | divided_by: 24 %}
-            {% if daysSince <= 30 %}
+            {% if daysSince <= site.new_badge %}
               <span class="badge badge-primary">new</span>
             {% endif %}
             
