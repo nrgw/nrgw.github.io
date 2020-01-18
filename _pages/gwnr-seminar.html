@@ -5,7 +5,7 @@ permalink: /gwnr-seminar/
 my_header: gwnr-seminar-header.html
 
 ---
-
+현재시간: {{ site.time }}
 
 <table id="table"
        data-toggle="table"
@@ -32,9 +32,16 @@ my_header: gwnr-seminar-header.html
         <td>
           <a class="text-reset" href="{{ item.url }}">
             {{ item.title }}
-            {% if item.badge != nil and item.badge.size != 0 %}
+
+            {%   assign today = site.time | date: '%s' %}
+            {%   assign start = item.date | date: '%s' %}
+            {%   assign secondsSince = today | minus: start %}
+            {%   assign daysSince = secondsSince | divided_by: 60 | divided_by: 60 | divided_by: 24 %}
+
+            {% if daysSince < 30 %}
               <span class="badge badge-primary">{{ item.badge }}</span>
             {% endif %}
+            
           </a>
         </td>
         <td>{{ item.presenter }}</td>
