@@ -15,3 +15,5 @@ include:
 
 exclude:
   - .sass-cache
+
+timezone: Asia/Seoul
