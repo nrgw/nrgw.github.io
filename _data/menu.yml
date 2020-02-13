@@ -1,17 +1,14 @@
 - title: 그룹소개
   link: "/about/"
 
+- title: 학교
+  link: "/school/"
+
 - title: 세미나
   link: "/gwnr-seminar/"
 
-- title: 워크샵
+- title: 워크숍
   link: "/workshop/"
-
-- title: 스쿨
-  link: "/school/"
-
-- title: 새소식
-  link: "/news/"
 
 - title: 채용정보
   link: "/jobs/"

@@ -13,3 +13,9 @@
 .clickable{
   cursor:pointer;
 }
+.navbar-default {
+  background-color: #0b417ee1;
+}
+.footer-default {
+  background-color: #0b417ee1;
+}
