@@ -14,8 +14,11 @@
   cursor:pointer;
 }
 .navbar-default {
-  background-color: #0b417ee1;
+  background-color: #354f80;
 }
 .footer-default {
-  background-color: #0b417ee1;
+  background-color: #354f80;
+}
+.bg-card-default {
+  background-color: #ebf2ff;
 }
