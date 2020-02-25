@@ -22,3 +22,8 @@
 .bg-card-default {
   background-color: #ebf2ff;
 }
+.btn-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  }
