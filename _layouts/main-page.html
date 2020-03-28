@@ -22,10 +22,10 @@ layout: default
     <div class="col-lg-6 col-md-6 my-2">
       <div class="card border-light bg-light">
         <div class="card-body">
-          <h4 class="card-title text-justify mb-3">
+          <h4 class="card-title clearfix text-justify">
             {{ item.title }}
             {% if item.history_url != nil and item.history_url.size != 0 %}
-            <a class="btn btn-light btn-sm float-right" href="{{ item.history_url }}" role="button"><h4>+</h4></a>
+            <a class="btn btn-light btn-sm float-right" href="{{ item.history_url }}" role="button">+</a>
             {% endif %}
           </h4>
           <p class="card-text text-justify">
