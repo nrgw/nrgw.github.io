@@ -29,7 +29,7 @@ my_header: gwnr-seminar-header.html
       <tr>
         <td>{{ item.Count }}</td>
         <td>
-          <a class="text-reset" href="{{ item.url }}">
+          <a class="text-reset text-decoration-none" href="{{ item.url }}">
             {{ item.title }}
 
             {% assign today = site.time | date: '%s' %}
