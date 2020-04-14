@@ -6,6 +6,7 @@ my_header: gwnr-seminar-header.html
 
 ---
 
+
 <table id="table"
        data-toggle="table"
        data-pagination="true"
@@ -32,13 +33,18 @@ my_header: gwnr-seminar-header.html
           <a class="text-reset text-decoration-none" href="{{ item.url }}">
             {{ item.title }}
 
-            {% assign today = site.time | date: '%s' %}
-            {% assign start = item.date | date: '%s' %}
-            {% assign secondsSince = today | minus: start %}
-            {% assign daysSince = secondsSince | divided_by: 60 | divided_by: 60 | divided_by: 24 %}
-            {% if daysSince <= site.new_badge %}
-              <span class="badge badge-primary">new</span>
-            {% endif %}
+            <script>
+              var badge = '';
+              if (date_diff_indays({{ item.date | date: "%Y,%m,%d"}}) < {{ site.new_badge }}){
+                badge = 'new'
+              }
+              //alert({{item.Count}});
+              //alert(badge);
+              $('#badgeid{{ item.Count }}').append(badge);
+            </script>
+
+            <span class="badge badge-primary" id="badgeid{{ item.Count }}"></span>
+
             
           </a>
         </td>
@@ -46,12 +52,23 @@ my_header: gwnr-seminar-header.html
         <td>{{ item.date | date: "%Y"}}년 {{ item.date | date: "%m"}}월 {{ item.date | date: "%d"}}일
         </td>
       </tr>
-      {% endfor %}
+    {% endfor %}
     </tbody>
 </table>
+  
 
 <script>
   $(function() {
     $('#table').bootstrapTable()
   })
+</script>
+
+<script>
+  var date_diff_indays = function(yyyy, mm, dd) {
+  var today = new Date();
+  var today_yyyy = today.getFullYear();
+  var today_mm = today.getMonth();
+  var today_dd = today.getDate();
+  return Math.floor((Date.UTC(today_yyyy, today_mm, today_dd) - Date.UTC(yyyy, mm-1, dd) ) /(1000 * 60 * 60 * 24));
+  }
 </script>
